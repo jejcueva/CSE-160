@@ -1,0 +1,18 @@
+# ai tools
+.claude/
+.agents/
+.codex/
+.cursor/
+CLAUDE.md
+AGENTS.md
+agents/
+
+# context files
+assgn0CONTEXT/
+
+# ide
+.idea/
+
+# os
+.DS_Store
+Thumbs.db
