@@ -37,7 +37,7 @@
       createModelTriangle([36, 52, 50, 52, 44, 40], CARDINAL_COLORS.red),
       createModelTriangle([50, 52, 60, 48, 44, 40], CARDINAL_COLORS.red),
       createModelTriangle([60, 48, 68, 42, 50, 40], CARDINAL_COLORS.red),
-      createModelTriangle([24, 36, 18, 28, 30, 28], CARDINAL_COLORS.red),
+      createModelTriangle([24, 36, 22, 28, 30, 28], CARDINAL_COLORS.red),
       createModelTriangle([24, 36, 30, 28, 42, 40], CARDINAL_COLORS.red),
       createModelTriangle([18, 28, 24, 20, 30, 28], CARDINAL_COLORS.red),
       createModelTriangle([24, 20, 36, 16, 30, 28], CARDINAL_COLORS.red),
