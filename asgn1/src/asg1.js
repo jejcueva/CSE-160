@@ -44,6 +44,7 @@ function main() {
   connectVariablesToGLSL();
   addActionsForHtmlUI();
   renderAllShapes();
+  loadReferencePictureFromQueryString();
 }
 
 function setupWebGL() {
@@ -314,6 +315,19 @@ function getPointerData(ev) {
 
 function buildCardinalScene() {
   return buildCardinalSceneFromModel(modelTriangle);
+}
+
+function loadReferencePictureFromQueryString() {
+  const searchParams = new URLSearchParams(window.location.search);
+
+  if (searchParams.get("drawPicture") !== "1") {
+    return;
+  }
+
+  g_shapesList = Object.freeze([]);
+  g_sceneTriangles = Object.freeze(buildCardinalScene());
+  renderAllShapes();
+  setStatus("Reference picture loaded.");
 }
 
 function triangle(vertices, color) {
