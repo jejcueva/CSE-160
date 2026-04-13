@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 1 | JC Cardinal Painter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Assignment 1: WebGL Paint Program</h1>
+  <p>
+    Paint with points, triangles, and circles. Use the button below to draw my personalized picture:
+    a cardinal-style bird where <strong>J</strong> forms the neck/head and an open <strong>C</strong> wraps around the body.
+  </p>
+  <p>
+    Awesomeness: drag strokes are interpolated to fill gaps, and triangle brush strokes rotate with mouse direction.
+  </p>
+
+  <canvas id="webgl" width="700" height="700" aria-label="WebGL drawing canvas"></canvas>
+
+  <p id="statusLine">Ready to paint.</p>
+  <p><span id="shapeCount">0 shapes</span> | <span id="renderTime">0.00 ms</span></p>
+
+  <div class="controls">
+    <p>
+      <button type="button" id="clearButton">Clear Canvas</button>
+      <button type="button" id="drawReferenceButton">Draw Picture</button>
+    </p>
+
+    <p>
+      Drawing Mode:
+      <button type="button" class="tool-button is-active" data-tool="point">Points</button>
+      <button type="button" class="tool-button" data-tool="triangle">Triangles</button>
+      <button type="button" class="tool-button" data-tool="circle">Circles</button>
+    </p>
+
+    <p>
+      Shape Color:
+      <label for="redSlider">Red</label>
+      <input id="redSlider" type="range" min="0" max="255" value="220">
+      <span id="redValue">220</span>
+
+      <label for="greenSlider">Green</label>
+      <input id="greenSlider" type="range" min="0" max="255" value="32">
+      <span id="greenValue">32</span>
+
+      <label for="blueSlider">Blue</label>
+      <input id="blueSlider" type="range" min="0" max="255" value="46">
+      <span id="blueValue">46</span>
+      <span id="colorSwatch" class="swatch" aria-hidden="true"></span>
+    </p>
+
+    <p>
+      <label for="sizeSlider">Shape Size</label>
+      <input id="sizeSlider" type="range" min="6" max="60" value="18">
+      <span id="sizeValue">18</span>
+
+      <label for="segmentsSlider">(Circles) Segment Count</label>
+      <input id="segmentsSlider" type="range" min="3" max="40" value="18">
+      <span id="segmentsValue">18</span>
+    </p>
+  </div>
+
+  <h2>Reference Drawing</h2>
+  <p>Personal sketch used for the WebGL picture. The body stays open on the right so the C initial reads clearly.</p>
+  <figure class="reference-figure">
+    <figcaption>Personal Sketch</figcaption>
+    <img
+      src="assets/IMG_0265.PNG"
+      alt="Personal sketch of the JC cardinal drawing"
+      class="reference-image"
+    >
+  </figure>
+
+  <script src="src/Point.js"></script>
+  <script src="src/Triangle.js"></script>
+  <script src="src/Circle.js"></script>
+  <script src="src/cardinalScene.js"></script>
+  <script src="src/asg1.js"></script>
+</body>
+</html>

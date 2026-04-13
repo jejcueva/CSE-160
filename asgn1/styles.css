@@ -1,0 +1,54 @@
+body {
+  margin: 8px;
+  font-family: serif;
+  color: #000;
+  background: #fff;
+}
+
+h1,
+h2,
+p {
+  margin: 0 0 12px;
+}
+
+#webgl {
+  display: block;
+  width: 700px;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #000;
+  margin-bottom: 12px;
+}
+
+.controls {
+  margin-bottom: 16px;
+}
+
+.tool-button.is-active {
+  font-weight: bold;
+}
+
+.swatch {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  border: 1px solid #000;
+  background: rgb(220, 32, 46);
+}
+
+.reference-image {
+  display: block;
+  max-width: 100%;
+  width: 720px;
+  border: 1px solid #000;
+}
+
+.reference-figure {
+  margin: 0;
+}
+
+.reference-figure figcaption {
+  margin-bottom: 6px;
+  font-weight: bold;
+}
