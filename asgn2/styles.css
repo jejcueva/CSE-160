@@ -1,0 +1,42 @@
+body {
+  margin: 8px;
+  font-family: serif;
+  color: #000;
+  background: #fff;
+}
+
+h1,
+h2,
+p {
+  margin: 0 0 12px;
+}
+
+h2 {
+  font-size: 1.1rem;
+}
+
+#webgl {
+  display: block;
+  width: 800px;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #000;
+  margin-bottom: 12px;
+}
+
+.controls {
+  margin-top: 16px;
+}
+
+.controls section {
+  margin-bottom: 18px;
+}
+
+input[type="range"] {
+  width: min(420px, 100%);
+  vertical-align: middle;
+}
+
+button {
+  font: inherit;
+}

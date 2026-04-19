@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 2 | Fox</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Assignment 2: Hierarchical Fox Model</h1>
+  <p>
+    Assigned animal: <strong>fox</strong>. This model is inspired by the nine-tailed fox Kurama from Naruto, but it is still meant to read clearly as a fox.
+  </p>
+  <p>
+    Controls: drag on the canvas to rotate. Hold <strong>Shift</strong> and click the canvas to trigger the poke animation.
+  </p>
+  <p>
+    Features included: global rotation, articulated leg chain, grouped joint sliders, animation toggle, mouse rotation,
+    shift-click poke, non-cube primitive, and performance readout.
+  </p>
+
+  <canvas id="webgl" width="800" height="640" aria-label="WebGL fox canvas"></canvas>
+
+  <p id="statusLine">Initializing WebGL fox rig.</p>
+  <p>
+    <span>Mode: <span id="poseMode">manual</span></span>
+    |
+    <span>Frame: <span id="frameTime">0.00 ms</span></span>
+    |
+    <span>FPS: <span id="fpsValue">0.0</span></span>
+  </p>
+
+  <div class="controls">
+    <section>
+      <h2>View</h2>
+      <p>
+        <label for="globalRotationSlider">Global rotation</label>
+        <input id="globalRotationSlider" type="range" min="-180" max="180" value="18">
+        <span id="globalRotationValue">18</span>
+      </p>
+    </section>
+
+    <section>
+      <h2>Head</h2>
+      <p>
+        <label for="neckPitchSlider">Neck pitch</label>
+        <input id="neckPitchSlider" type="range" min="-35" max="35" value="4">
+        <span id="neckPitchValue">4</span>
+      </p>
+      <p>
+        <label for="headYawSlider">Head yaw</label>
+        <input id="headYawSlider" type="range" min="-40" max="40" value="0">
+        <span id="headYawValue">0</span>
+      </p>
+    </section>
+
+    <section>
+      <h2>Front Legs</h2>
+      <p>
+        <label for="frontLegUpperSlider">Upper</label>
+        <input id="frontLegUpperSlider" type="range" min="-45" max="45" value="10">
+        <span id="frontLegUpperValue">10</span>
+      </p>
+      <p>
+        <label for="frontLegLowerSlider">Lower</label>
+        <input id="frontLegLowerSlider" type="range" min="-60" max="45" value="-14">
+        <span id="frontLegLowerValue">-14</span>
+      </p>
+      <p>
+        <label for="frontLegPawSlider">Paw</label>
+        <input id="frontLegPawSlider" type="range" min="-30" max="30" value="6">
+        <span id="frontLegPawValue">6</span>
+      </p>
+    </section>
+
+    <section>
+      <h2>Hind Legs</h2>
+      <p>
+        <label for="hindLegUpperSlider">Upper</label>
+        <input id="hindLegUpperSlider" type="range" min="-45" max="45" value="-8">
+        <span id="hindLegUpperValue">-8</span>
+      </p>
+      <p>
+        <label for="hindLegLowerSlider">Lower</label>
+        <input id="hindLegLowerSlider" type="range" min="-60" max="45" value="16">
+        <span id="hindLegLowerValue">16</span>
+      </p>
+      <p>
+        <label for="hindLegPawSlider">Paw</label>
+        <input id="hindLegPawSlider" type="range" min="-30" max="30" value="-4">
+        <span id="hindLegPawValue">-4</span>
+      </p>
+    </section>
+
+    <section>
+      <h2>Tail Fan</h2>
+      <p>
+        <label for="tailBaseCurlSlider">Base curl</label>
+        <input id="tailBaseCurlSlider" type="range" min="-10" max="55" value="0">
+        <span id="tailBaseCurlValue">0</span>
+      </p>
+      <p>
+        <label for="tailMidCurlSlider">Mid curl</label>
+        <input id="tailMidCurlSlider" type="range" min="-10" max="70" value="0">
+        <span id="tailMidCurlValue">0</span>
+      </p>
+      <p>
+        <label for="tailTipCurlSlider">Tip curl</label>
+        <input id="tailTipCurlSlider" type="range" min="-10" max="85" value="0">
+        <span id="tailTipCurlValue">0</span>
+      </p>
+    </section>
+
+    <section>
+      <h2>Animation</h2>
+      <p>
+        <button type="button" id="animationOnButton">Animation On</button>
+        <button type="button" id="animationOffButton">Animation Off</button>
+        <button type="button" id="resetPoseButton">Reset Pose</button>
+      </p>
+    </section>
+  </div>
+
+  <script src="lib/cuon-matrix-cse160.js"></script>
+  <script src="src/matrixUtils.js"></script>
+  <script src="src/primitives.js"></script>
+  <script src="src/animation.js"></script>
+  <script src="src/foxModel.js"></script>
+  <script src="src/ui.js"></script>
+  <script src="src/asg2.js"></script>
+</body>
+</html>
