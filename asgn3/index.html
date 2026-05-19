@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 3 | Fox Spirit Grove</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Assignment 3: Fox Spirit Grove</h1>
+  <p>
+    A first-person virtual world built with textured cubes, a perspective camera, keyboard and mouse controls,
+    editable block stacks, and the fox from Assignment 2 placed in the world as the shrine guardian.
+  </p>
+  <p>
+    Controls: <strong>W / A / S / D</strong> move, <strong>Q / E</strong> rotate, drag on the canvas to look around,
+    <strong>F</strong> removes a block, and <strong>G</strong> adds a block.
+  </p>
+  <p>
+    Reference used: Matsuda/Lea <em>WebGL Programming Guide</em> from <code>assgn3CONTEXT/references.txt</code>,
+    especially Chapter 5 for textures and Chapter 7 for camera setup.
+  </p>
+
+  <canvas id="webgl" width="960" height="640" aria-label="WebGL fox spirit grove canvas"></canvas>
+
+  <p id="statusLine">Preparing the grove.</p>
+  <p><strong>Quest:</strong> <span id="storyStatus">Recover the 3 spirit flames hidden across the grove.</span></p>
+  <p>
+    <span><strong>Position:</strong> <span id="positionValue">0.0, 0.0</span></span>
+    |
+    <span><strong>Frame:</strong> <span id="frameTime">0.00 ms</span></span>
+    |
+    <span><strong>FPS:</strong> <span id="fpsValue">0.0</span></span>
+  </p>
+
+  <div class="notes">
+    <p>The world layout comes from a hardcoded 32x32 height map.</p>
+    <p>Textures are loaded from local assignment assets.</p>
+    <p>Story goal: recover the three spirit flames and return them to the shrine.</p>
+  </div>
+
+  <script src="lib/cuon-matrix-cse160.js"></script>
+  <script src="src/matrixUtils.js"></script>
+  <script src="src/math.js"></script>
+  <script src="src/primitives.js"></script>
+  <script src="src/worldData.js"></script>
+  <script src="src/worldState.js"></script>
+  <script src="src/story.js"></script>
+  <script src="src/camera.js"></script>
+  <script src="src/foxAnimation.js"></script>
+  <script src="src/foxModel.js"></script>
+  <script src="src/input.js"></script>
+  <script src="src/textures.js"></script>
+  <script src="src/worldRenderer.js"></script>
+  <script src="src/asg3.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  padding: 24px 20px 40px;
+  max-width: 1120px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  color: #111;
+  background: #f7f7f7;
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-weight: 600;
+}
+
+h1 {
+  margin-bottom: 12px;
+}
+
+#webgl {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  margin: 16px 0 12px;
+  border: 1px solid #333;
+  background: #000;
+}
+
+code {
+  font-family: "Courier New", monospace;
+}
+
+.notes {
+  margin-top: 12px;
+}
+
+.notes p {
+  margin: 0 0 6px;
+}
