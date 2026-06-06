@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 5 | Spirit Grove Collectors</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css?v=3">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.164.1/examples/jsm/",
+        "three/addons/controls/OrbitControls.js": "https://cdn.jsdelivr.net/npm/three@0.164.1/examples/jsm/controls/OrbitControls.js",
+        "three/addons/loaders/GLTFLoader.js": "https://cdn.jsdelivr.net/npm/three@0.164.1/examples/jsm/loaders/GLTFLoader.js"
+      }
+    }
+  </script>
+</head>
+<body>
+  <main>
+    <h1 id="pageTitle">Assignment 5: Spirit Grove Collectors</h1>
+    <p>
+      Three.js scene with textured shapes, a textured GLB fox model, a cubemap skybox,
+      multiple lights, animated objects, and mouse camera controls.
+    </p>
+    <p class="wow-note">Wow: click the glowing spirit flames to awaken a spirit beam, pulsing rings, and floating sparks at the shrine.</p>
+    <p>Controls: drag to orbit, scroll to zoom, right-drag to pan.</p>
+    <p aria-live="polite">
+      <span id="collectibleCounter">Flames collected: 0 / 5</span>
+      |
+      <span id="statusLine">Loading the grove.</span>
+    </p>
+
+    <canvas id="sceneCanvas" aria-label="Three.js spirit grove scene"></canvas>
+
+    <h2>Rubric checklist</h2>
+    <ul>
+      <li>20+ primary shapes</li>
+      <li>Textured primary shape</li>
+      <li>Textured GLB model</li>
+      <li>3+ light types</li>
+      <li>Skybox</li>
+      <li>Perspective camera</li>
+      <li>OrbitControls</li>
+    </ul>
+
+  </main>
+
+  <script src="src/sceneData.js?v=3"></script>
+  <script type="module" src="src/asg5.js?v=3"></script>
+</body>
+</html>
